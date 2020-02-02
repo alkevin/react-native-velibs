@@ -24,7 +24,18 @@ const DetailScreen = ({navigation}) => {
     }
 
     const addBookmark = (station) => {
+      if(context.bookmarks.length == 0 ) {
         context.addBookmark(station);
+        navigation.navigate('Bookmarks');
+      }
+      if(context.bookmarks.length > 0) {
+        context.bookmarks.forEach(bookmark => {
+          if(bookmark.fields.station_name.toString() == station.fields.station_name.toString()){
+            console.log('already');
+            navigation.navigate('Bookmarks');
+          }      
+      });
+      }
     }
 
   return (

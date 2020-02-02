@@ -15,8 +15,6 @@ const VelibProvider = ({ children }) => {
     setBookmark([...bookmarks, bookmark]);
   };
 
-  console.log('bookmarks provider: ' + JSON.stringify(bookmarks));
-
   /*useEffect( () => {
     getVelibs();
 }, []);

@@ -16,7 +16,6 @@ export default function BookmarkListScreen({ navigation }) {
 
   const context = useContext(VelibContext);
   const bookmarks = context.bookmarks;
-  console.log('bookmarks: ' + JSON.stringify(bookmarks));
 
   const onItemSelected = station => {
     navigation.navigate('Detail', {station: station})
